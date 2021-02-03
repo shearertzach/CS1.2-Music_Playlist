@@ -51,20 +51,29 @@ def add_song(self, title):
         else:
             prev.set_next_song(current.get_next_song())
 
-  # TODO: Create a method called length, which returns the number of songs in the playlist.
+    def length(self):
+        current = self.__first_song
+        counter = 0
+        if current == None:
+            print(f"There are no songs in this list")
+        else:
+            while current.get_next_song() != None:
+                counter += 1
+                current = current.get_next_song()
 
-  def length(self):
-    pass
+        return counter + 1
 
 
-  # TODO: Create a method called print_songs that prints a numbered list of the songs in the playlist.
+    def print_songs(self):
+        current = self.__first_song
+        counter = 1
 
-  # Example:
-  # 1. Song Title 1
-  # 2. Song Title 2
-  # 3. Song Title 3
-
-  def print_songs(self):
-    pass
+        if current == None:
+            print("No songs found!")
+        else:
+            while current != None:
+                print(f'#{counter} {current.get_title()}')
+                counter += 1
+                current = current.get_next_song()
 
   
