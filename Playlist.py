@@ -26,7 +26,7 @@ class Playlist:
                 found = True
             else:
                 current = current.get_next_song()
-                index + 1
+                index += 1
 
         return index
 
