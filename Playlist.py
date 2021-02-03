@@ -1,11 +1,11 @@
 from Song import Song
 
 class Playlist:
-  def __init__(self):
-    self.__first_song = None
+    def __init__(self):
+        self.__first_song = None
 
 
-def add_song(self, title):
+    def add_song(self, title):
         current = self.__first_song
         new_song = Song(title)
 
